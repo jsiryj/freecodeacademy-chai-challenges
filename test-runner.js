@@ -77,3 +77,7 @@ module.exports = emitter;
  *   - `fail`  (test, err) test failed
  *   - `pending`  (test) test pending
  */
+
+var chai = require('chai');
+var assert = chai.assert;
+assert.isNull();
