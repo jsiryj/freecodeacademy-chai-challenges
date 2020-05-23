@@ -272,13 +272,13 @@ suite('Functional Tests', function() {
       /** Try it again... No help this time **/
       test('submit "surname" : "Vespucci" - write your e2e test...', function(done) {
         browser
-        .fill('surname', 'Vespuci')
+        .fill('surname', 'Vespucci')
         .pressButton('submit', function(){
-                  browser.assert.success();
-        browser.assert.text('span#name', 'Amerigo');
-        browser.assert.text('span#surname', 'Vespucci');
-        browser.assert.element('span#dates', 1);
-        done();
+            browser.assert.success();
+            browser.assert.text('span#name', 'Amerigo');
+            browser.assert.text('span#surname', 'Vespucci');
+            browser.assert.element('span#dates', 1);
+            done();
         });
         // fill the form, and submit.
         // assert that status is OK 200
