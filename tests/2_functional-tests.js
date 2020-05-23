@@ -145,11 +145,15 @@ suite('Functional Tests', function() {
         .put('/travelers')
         .send({surname: 'da Verrazzano'})
         .end((res, err) => {
-          assert.equal(res.)
+          assert.equal(res.status, 200, 'check that status');
+          assert.equal(res.type, 'application/json', 'check that type');
+          
+          assert.equal(res.body.name, 'Giovanni', 'check that name');
+          assert.equal(res.body.surname, 'da Verrazzano', 'check that last name');
         })
         /** place your tests inside the callback **/
         
-        assert.fail(); // remove this after adding tests
+        //assert.fail(); // remove this after adding tests
         done();
       });
     });
